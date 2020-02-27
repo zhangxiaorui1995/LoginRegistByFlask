@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页面练习</title>
+    <style>
+
+        body{
+            background-color: rgb(217, 235, 250);
+
+        }
+
+        .loginn{
+            background-color: white;
+            height: 320px;
+            width: 240px;
+            padding: 25px;
+            margin-top: 150px;
+            margin-left:60%;
+            border-radius: 25px;
+            box-shadow:  4px 4px 8px rgba(0, 0, 0,0.5);
+        }
+        .loginn>p{
+            margin-left: 40%;
+            margin-top: 10px;
+            color:black;
+            font-size: 20px;
+        }
+
+        .LOGB{
+            border-collapse: separate;
+            border-radius: 15px;
+            border: 1px solid rgb(167, 160, 160);
+            text-align: right;
+            width: 98%;
+            height: 40Px;;
+
+
+        }
+        .LOGD{
+            width: 80%;
+            height: 35px;
+            margin-left: 8%;
+            border-radius: 25px;
+            background-color: rgb(160, 207, 192);
+            border: 1px solid wheat;
+            outline: none;
+        }
+        .LOGE{
+            font-size: 10px;
+            margin-left: 30%;
+            margin-bottom: 10%;
+        }
+        .input2{
+            outline: none;
+            border: 0px;
+            margin-right: 20%;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="loginn">
+        <p>登录</p>
+        <br>
+        <form action="http://127.0.0.1:5000/lsuccess/" method="post">
+            <table class="LOGB" cellspacing="0">
+                <tr>
+                    <td>用户名:&nbsp;</td>
+                    <td><input type="text"  placeholder="姓名" class="input2" name="username"></td>
+                </tr>
+
+            </table>
+            <br>
+           <table class="LOGB"  cellspacing="0" >
+                <tr>
+                    <td>密码: </td>
+                    <td><input type="password" placeholder="你的密码" class="input2" name="password"></td>
+                </tr>
+            </table>
+            <br>
+             <br>
+            <div class="LOGD">
+                <a href=""><button class="LOGD" >登录</button></a>
+            </div>
+            <br>
+            <div class="LOGE">
+                <p>没有账号？<a href="{{ url_for('regist_html') }}">立即注册</a></p>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>
